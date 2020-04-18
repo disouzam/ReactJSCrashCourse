@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Todos from './components/Todos';
 
@@ -19,15 +18,19 @@ class App extends Component {
       {
         id: 3,
         title: 'Meeting with boss',
+        completed:true
+      },
+      {
+        id: 4,
+        title: 'Study the slag splashing process',
         completed:false
       }
     ]
   }  
   render(){
-    console.log(this.state.todos);
     return (
       <div className="App">
-        <Todos></Todos>
+        <Todos todos = {this.state.todos}/>
       </div>
     );
   }
